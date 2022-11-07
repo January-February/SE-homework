@@ -15,17 +15,21 @@ int main()
 	scanf("%d", &begin_no);
 	if (begin_no == 1)
 	{
-		int grade = 0;
-		int count = 0;
+		int grade = 0;//输入年级
+		int count = 0;//输入所需题目数量
 		printf("请输入年级\n");
 		scanf("%d", &grade);
 		printf("请输入所需题目数量\n");
 		scanf("%d", &count);
-		primary_school_taxt(grade, count);
+		primary_school_taxt(grade, count);//自动生成四则运算练习题
 	}
 	else if (begin_no == 0)
 	{
 		printf("欢迎再次使用!");
+	}
+	else
+	{
+		printf("您输入错误,请如需使用请重新打开程序并正确输入");
 	}
 	return 0;
 }
