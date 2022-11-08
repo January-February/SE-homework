@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-void primary_school_taxt(int grade, int count);
+void primary_school_taxt(int grade, int count);//º¯ÊıÉùÃ÷
 
 int main()
 {
@@ -136,10 +136,10 @@ void primary_school_taxt(int grade, int count)
 			int arr_bit2 = 2;
 			int arr_bit3 = 3;
 			int arr_bit4 = 4;
-			float c = rand() % 10000 + 1;
-			float c2 = rand() % 10000 + 1;
-			float c3 = rand() % 10000 + 1;
-			float c4 = rand() % 10000 + 1;
+			float c = rand()+1;
+			float c2 = rand()+1;
+			float c3 = rand()+1;
+			float c4 = rand()+1;
 			if (Dm4 == 1 && sum1 <= (count / 4))
 			{
 				if (((c2 - (c3 * c4))) >= 0)
@@ -158,9 +158,9 @@ void primary_school_taxt(int grade, int count)
 			}
 			else if (Dm4 == 3 && sum3 <= (count / 4))
 			{
-				if (((c / (c2 * c3) - c4)) > 0)
+				if (((c2 + c3) - c4) > 0)
 				{
-					printf("%.0f %c (%.0f %c %.0f) %c %.0f= \n", c, arr[arr_bit4], c2, arr[arr_bit3], c3, arr[arr_bit2], c4);
+					printf("%.0f %c (%.0f %c %.0f) %c %.0f= \n", c, arr[arr_bit3], c2, arr[arr_bit], c3, arr[arr_bit2], c4);
 					sum3++;
 				}
 			}
