@@ -7,7 +7,7 @@
 FILE* p;
 int n, max, fuhao, fa, fl, kuohao, file;
 
-void xiaoshuyunsuandaan(double y[])     //小数运算答案
+void po_answer(double y[])     //小数运算答案
 {
 	int i;
 	if (file == 1)
@@ -24,7 +24,7 @@ void xiaoshuyunsuandaan(double y[])     //小数运算答案
 	}
 }
 
-void zhengshuyunsuandaan(int y[])       //整数运算答案
+void zs_answer(int y[])       //整数运算答案
 {
 	int i;
 	if (file == 1)      //输出到文件
@@ -78,7 +78,7 @@ void zhengshusize()  //简单运算，整数的四则运算
 		else
 			fprintf(p, "(%d) %d%c%d=\n", i, a, c, b);
 	}
-	zhengshuyunsuandaan(x);   //获取答案
+	zs_answer(x);   //获取答案
 }
 
 void xiaoshusize()  //简单运算，小数的四则运算
@@ -119,7 +119,7 @@ void xiaoshusize()  //简单运算，小数的四则运算
 		else
 			fprintf(p, "(%d) %.2f%c%.2f=\n", i, a, c, b);
 	}
-	xiaoshuyunsuandaan(x);   //获取答案
+	po_answer(x);   //获取答案
 }
 
 void mixDecimals()  //混合运算（小数）
@@ -191,7 +191,7 @@ void mixDecimals()  //混合运算（小数）
 				fprintf(p, "(%d) (%.2f%c%.2f)%c%.2f=\n", i, a, d, b, e, c);
 		}
 	}
-	xiaoshuyunsuandaan(x);   //获取答案
+	po_answer(x);   //获取答案
 }
 
 void  hunheyunsuan1()  //混合运算（整数）
@@ -263,7 +263,7 @@ void  hunheyunsuan1()  //混合运算（整数）
 				fprintf(p, "(%d) (%d%c%d)%c%d=\n", i, a, d, b, e, c);
 		}
 	}
-	zhengshuyunsuandaan(x);   //获取答案
+	zs_answer(x);   //获取答案
 }
 
 int main()
